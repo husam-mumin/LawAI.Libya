@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/global/AppSidebar";
 import { ThemeProvider } from "@/components/global/ThemesProvider";
 
@@ -38,6 +38,7 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <AppSidebar />
+            <SidebarTrigger className="inline-flex  md:hidden" />
             {children}
           </SidebarProvider>
         </ThemeProvider>
