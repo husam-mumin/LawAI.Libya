@@ -36,9 +36,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
+          <SidebarProvider className="flex flex-col">
             <AppSidebar />
-            <SidebarTrigger className="inline-flex  md:hidden" />
+
+            <SidebarTrigger className="inline-flex  md:hidden absolute top-1 left-1" />
+            <div className="w-dvh h-8 md:hidden" />
+
             {children}
           </SidebarProvider>
         </ThemeProvider>
