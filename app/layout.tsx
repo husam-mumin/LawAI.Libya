@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={` ${geistSans.variable} ${geistMono.variable} antialiased  overflow-hidden`}
       >
         <ThemeProvider
           attribute={"class"}
@@ -40,7 +40,7 @@ export default function RootLayout({
             <AppSidebar />
 
             <SidebarTrigger className="inline-flex  md:hidden absolute top-1 left-1" />
-            <div className="w-dvh h-8 md:hidden" />
+            <div className="w-dvw h-8 md:hidden" />
 
             {children}
           </SidebarProvider>

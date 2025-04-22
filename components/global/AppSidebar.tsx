@@ -27,7 +27,7 @@ const chatList = ["chat 1", "chat 2", "chat 3"];
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant="floating">
       <SidebarHeader className="flex flex-row items-center justify-between  py-2">
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
           <Link href={"/"}>
