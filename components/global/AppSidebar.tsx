@@ -52,8 +52,8 @@ export function AppSidebar() {
                 <Plus /> <span className="sr-only">Favorite</span>
               </SidebarGroupAction>
             </Link>
-            {chatList.map((chat) => (
-              <Link href={"/chat"} key={chat}>
+            {chatList.map((chat, index) => (
+              <Link href={"/chat/" + ++index} key={chat}>
                 <div className="flex items-center gap-2 p-2 rounded-md hover:bg-accent hover:text-accent-foreground cursor-pointer">
                   <span className="text-sm">{chat}</span>
                 </div>
