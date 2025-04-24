@@ -4,6 +4,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/global/AppSidebar";
 import { ThemeProvider } from "@/components/global/ThemesProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${geistSans.variable} ${geistMono.variable} antialiased  overflow-hidden`}
+        className={` ${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
         <ThemeProvider
           attribute={"class"}
@@ -37,13 +38,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider className="flex flex-col">
-            <AppSidebar />
+            <div className="flex flex-col md:flex-row">
+              <AppSidebar />
 
-            <SidebarTrigger className="inline-flex  md:hidden absolute top-1 left-1" />
-            <div className="w-dvw h-8 md:hidden" />
+              <SidebarTrigger className="flex  md:hidden ml-2 mt-2" />
 
-            {children}
+              {children}
+            </div>
           </SidebarProvider>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
