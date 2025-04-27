@@ -47,12 +47,17 @@ const chat = [
     response: "## you can do this and that",
   },
 ];
-export default function Page({ params }: { params: { chatid: string } }) {
-  const chatId = params.chatid;
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ chatid: string }>;
+}) {
+  const { chatid } = await params;
 
   return (
     <div className="flex flex-col gap-2 w-full h-dvh justify-between items-center">
-      <h1 className="text-lg font-bold">Chat {chatId}</h1>
+      <h1 className="text-lg font-bold">Chat {chatid}</h1>
       <div className="flex flex-col gap-2 p-4 w-full overflow-y-auto h-[calc(100vh-10rem)]">
         <ScrollArea className="h-full w-full ">
           <div className="flex flex-col gap-2">
