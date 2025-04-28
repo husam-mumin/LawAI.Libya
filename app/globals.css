@@ -124,5 +124,12 @@
   }
 }
 
+.markdown {
+  @apply  max-w-screen overflow-hidden; 
+}
+.markdown table {
+  @apply overflow-x-auto max-w-full;
+}
+
 
 /* markdown.css or inside a <style> block with Tailwind support */

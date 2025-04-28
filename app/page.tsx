@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="">
       <div className="flex flex-wrap gap-4 mt-[2rem] ml-[2rem]  ">
-        <Card className="w-[300px] h-[200px]">
+        <Card className="w-[300px] h-[200px] hover:bg-secondary cursor-pointer transition-all duration-200 ease-in-out">
           <CardHeader>
             <CardTitle>القنون المدني</CardTitle>
           </CardHeader>

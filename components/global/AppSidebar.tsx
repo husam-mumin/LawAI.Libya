@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Heart, MessageSquareIcon, Plus, Settings } from "lucide-react";
+import { MessageSquareIcon, Plus, Settings } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -84,15 +84,6 @@ export function AppSidebar() {
             </Tooltip>
           </TooltipProvider>
           <Separator className="my-2" />
-          <SidebarGroup className="flex flex-col gap-2  py-2 ">
-            <SidebarMenu>
-              <SidebarMenuButton asChild>
-                <Link href={"/"} className="flex items-center gap-2 p-2">
-                  <Heart /> <span className="text-sm">Favorites</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenu>
-          </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
           <SidebarMenu className="flex flex-col gap-2  py-2 ">
